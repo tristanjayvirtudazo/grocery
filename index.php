@@ -1,10 +1,10 @@
-<?php 
+<?php
 require_once 'php_action/db_connect.php';
 
 session_start();
 
-if(isset($_SESSION['userId'])) {
-	header('location: http://localhost/stock/dashboard.php');	
+if (isset($_SESSION['userId'])) {
+	header('location: http://128.199.248.115/grocery/stock/dashboard.php');
 }
 
 $sql = "SELECT * FROM branch";
@@ -15,6 +15,7 @@ $result = $connect->query($sql);
 
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Nerissa's Grocery Store</title>
 
@@ -25,18 +26,19 @@ $result = $connect->query($sql);
 	<!-- font awesome -->
 	<link rel="stylesheet" href="assests/font-awesome/css/font-awesome.min.css">
 
-  <!-- custom css -->
-  <link rel="stylesheet" href="custom/css/custom.css">	
+	<!-- custom css -->
+	<link rel="stylesheet" href="custom/css/custom.css">
 
-  <!-- jquery -->
+	<!-- jquery -->
 	<script src="assests/jquery/jquery.min.js"></script>
-  <!-- jquery ui -->  
-  <link rel="stylesheet" href="assests/jquery-ui/jquery-ui.min.css">
-  <script src="assests/jquery-ui/jquery-ui.min.js"></script>
+	<!-- jquery ui -->
+	<link rel="stylesheet" href="assests/jquery-ui/jquery-ui.min.css">
+	<script src="assests/jquery-ui/jquery-ui.min.js"></script>
 
-  <!-- bootstrap js -->
+	<!-- bootstrap js -->
 	<script src="assests/bootstrap/js/bootstrap.min.js"></script>
 </head>
+
 <body>
 	<div class="container">
 		<br><br><br><br>
@@ -44,18 +46,18 @@ $result = $connect->query($sql);
 		<br>
 		<div class="row text-center">
 			<?php
-				if($result->num_rows > 0) {
-					while($row = mysqli_fetch_assoc($result)){
+			if ($result->num_rows > 0) {
+				while ($row = mysqli_fetch_assoc($result)) {
 			?>
-			<div class="col-md-4">
-				<h3><?php echo $row["street"] ?></h3>
-				<h5><?php echo $row['city'] ?></h5>
-				<h1><a href="./login.php?branch=<?php echo $row['id']?>" class="btn btn-default btn-lg btn-success">Branch <?php echo $row['id'] ?></a></h1>
-			</div>
+					<div class="col-md-4">
+						<h3><?php echo $row["street"] ?></h3>
+						<h5><?php echo $row['city'] ?></h5>
+						<h1><a href="./login.php?branch=<?php echo $row['id'] ?>" class="btn btn-default btn-lg btn-success">Branch <?php echo $row['id'] ?></a></h1>
+					</div>
 			<?php
-					}
 				}
-				mysqli_close($connect);	
+			}
+			mysqli_close($connect);
 			?>
 
 			<!-- <div class="col-md-4">
@@ -71,13 +73,7 @@ $result = $connect->query($sql);
 			</div> -->
 		</div>
 	</div>
-	<!-- container -->	
+	<!-- container -->
 </body>
+
 </html>
-
-
-
-
-
-
-	

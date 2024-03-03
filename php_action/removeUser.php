@@ -1,4 +1,4 @@
-<?php 	
+<?php
 
 require_once 'core.php';
 
@@ -7,20 +7,19 @@ require_once 'core.php';
 
 $userID = $_GET['user'];
 
-if($userID) { 
+if ($userID) {
 
- $sql = "DELETE FROM users WHERE user_id = '$userID'";
+	$sql = "DELETE FROM users WHERE user_id = '$userID'";
 
- if($connect->query($sql) === TRUE) {
- 	$valid['success'] = true;
-	$valid['messages'] = "Successfully Removed";		
- } else {
- 	$valid['success'] = false;
- 	$valid['messages'] = "Error while remove the brand";
- }
- 
- $connect->close();
+	if ($connect->query($sql) === TRUE) {
+		$valid['success'] = true;
+		$valid['messages'] = "Successfully Removed";
+	} else {
+		$valid['success'] = false;
+		$valid['messages'] = "Error while remove the brand";
+	}
 
- header("Location: http://localhost/stock/users.php");
- 
+	$connect->close();
+
+	header("Location: http://128.199.248.115/grocery/stock/users.php");
 } // /if $_POST
