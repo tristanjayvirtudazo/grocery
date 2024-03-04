@@ -4,7 +4,7 @@ require_once 'php_action/db_connect.php';
 session_start();
 
 if (isset($_SESSION['userId'])) {
-	header('location: http://128.199.248.115/grocery/stock/dashboard.php');
+	header('location: https://nerissas-grocery.store/dashboard.php');
 }
 
 $sql = "SELECT * FROM branch";
