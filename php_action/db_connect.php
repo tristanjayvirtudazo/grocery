@@ -1,6 +1,6 @@
 <?php
 
-$localhost = "nerissas-grocery.store";
+$localhost = "localhost";
 $username = "u293422315_stock";
 $password = "1k!Uh=rT";
 $dbname = "u293422315_stock";
