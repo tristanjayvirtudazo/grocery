@@ -35,7 +35,7 @@ if ($_POST) {
 			}
 		} else {
 			$password = md5($password);
-			$sql = "SELECT * FROM users WHERE  username = '$username' AND password = '$password' AND (branch_name = '$selectedBranch' OR `role` = 'admin')";
+			$sql = "SELECT * FROM users WHERE  username = '$username' AND password = '$password' AND (branch_name = '$selectedBranch' OR role = 'admin')";
 			echo $sql;
 			$result = $connect->query($sql);
 
