@@ -8,4 +8,4 @@ session_unset();
 // destroy the session 
 session_destroy();
 
-header('location: http://128.199.248.115/grocery/stock/index.php');
+header('location: https://nerissas-grocery.store/index.php');
