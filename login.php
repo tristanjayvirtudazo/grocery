@@ -4,11 +4,11 @@ require_once 'php_action/db_connect.php';
 session_start();
 
 if (isset($_SESSION['userId'])) {
-	header('location: http://128.199.248.115/grocery/stock/dashboard.php');
+	header('location: http://localhost/stock/dashboard.php');
 }
 
 if (!$_GET['branch']) {
-	header('Location: http://128.199.248.115/grocery/stock/index.php');
+	header('Location: http://localhost/stock/index.php');
 }
 
 $errors = array();
@@ -34,33 +34,25 @@ if ($_POST) {
 				$errors[] = "Password is required.";
 			}
 		} else {
-			$sql = "SELECT * FROM users WHERE username = '$username'";
+			$password = md5($password);
+			$sql = "SELECT * FROM users WHERE  username = '$username' AND password = '$password' AND (branch_name = '$selectedBranch' OR `role` = 'admin')";
 			$result = $connect->query($sql);
 
 			if ($result->num_rows == 1) {
-				$password = md5($password);
-				// exists
-				$mainSql = "SELECT * FROM users WHERE  username = '$username' AND password = '$password' AND (branch_name = '$selectedBranch' OR role = 'admin')";
-				$mainResult = $connect->query($mainSql);
+				$value = $result->fetch_assoc();
+				$user_id = $value['user_id'];
 
-				if ($mainResult->num_rows == 1) {
-					$value = $mainResult->fetch_assoc();
-					$user_id = $value['user_id'];
+				// set session
+				$_SESSION['userId'] = $user_id;
+				$_SESSION['branch'] = $selectedBranch;
+				$_SESSION['full_name'] = $value['full_name'];
+				$_SESSION['role_type'] = $value['role'];
 
-					// set session
-					$_SESSION['userId'] = $user_id;
-					$_SESSION['branch'] = $selectedBranch;
-					$_SESSION['full_name'] = $value['full_name'];
-					$_SESSION['role_type'] = $value['role'];
-
-					header('location: http://128.199.248.115/grocery/stock/dashboard.php?branch=' . $value['branch_name']);
-				} else {
-
-					$errors[] = "Incorrect username/password combination. Please try again.";
-				} // /else
+				header('location: http://localhost/stock/dashboard.php?branch=' . $value['branch_name']);
 			} else {
-				$errors[] = "Username does not exist. Please try again.";
-			} // /else
+
+				$errors[] = "Incorrect username/password combination. Please try again.";
+			}
 		}
 		// /else not empty username // password
 	} elseif (isset($_POST['createUser'])) {
@@ -74,7 +66,7 @@ if ($_POST) {
 		if ($connect->query($sql_reg) != TRUE) {
 			$errors[] = "Registration unsuccessful.";
 		}
-		header('location: http://128.199.248.115/grocery/stock/login.php?branch=' . $_GET['branch']);
+		header('location: http://localhost/stock/login.php?branch=' . $_GET['branch']);
 	}
 
 	$connect->close();
