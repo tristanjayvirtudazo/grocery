@@ -21,5 +21,5 @@ if ($userID) {
 
 	$connect->close();
 
-	header("Location: http://128.199.248.115/grocery/stock/users.php");
+	header("Location: https://nerissas-grocery.store/users.php");
 } // /if $_POST
