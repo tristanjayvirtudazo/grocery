@@ -4,11 +4,11 @@ require_once 'php_action/db_connect.php';
 session_start();
 
 if (isset($_SESSION['userId'])) {
-	header('location: http://localhost/stock/dashboard.php');
+	header('location: https://nerissas-grocery.store/dashboard.php');
 }
 
 if (!$_GET['branch']) {
-	header('Location: http://localhost/stock/index.php');
+	header('Location: https://nerissas-grocery.store/index.php');
 }
 
 $errors = array();
@@ -48,7 +48,7 @@ if ($_POST) {
 				$_SESSION['full_name'] = $value['full_name'];
 				$_SESSION['role_type'] = $value['role'];
 
-				header('location: http://localhost/stock/dashboard.php?branch=' . $value['branch_name']);
+				header('location: https://nerissas-grocery.store/dashboard.php?branch=' . $value['branch_name']);
 			} else {
 
 				$errors[] = "Incorrect username/password combination. Please try again.";
@@ -66,7 +66,7 @@ if ($_POST) {
 		if ($connect->query($sql_reg) != TRUE) {
 			$errors[] = "Registration unsuccessful.";
 		}
-		header('location: http://localhost/stock/login.php?branch=' . $_GET['branch']);
+		header('location: https://nerissas-grocery.store/login.php?branch=' . $_GET['branch']);
 	}
 
 	$connect->close();
