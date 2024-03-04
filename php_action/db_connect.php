@@ -1,9 +1,9 @@
 <?php
 
-$localhost = "128.199.248.115";
-$username = "developer";
-$password = "adminP@ssw0rd";
-$dbname = "stock";
+$localhost = "nerissas-grocery.store";
+$username = "u293422315_stock";
+$password = "1k!Uh=rT";
+$dbname = "u293422315_stock";
 $port = "3306";
 
 // db connection
