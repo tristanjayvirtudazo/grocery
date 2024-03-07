@@ -109,7 +109,7 @@ if ($_POST) {
 		</div>
 
 		<div class="row vertical">
-			<div class="col-md-5 d-flex justify-content-center">
+			<div class="col-md-6 col-md-offset-3">
 				<div class="panel panel-info">
 					<div class="panel-heading">
 						<h1 class="panel-title text-center">Welcome to Nerissa's Grocery Store Inventory System <br> (<?= $selectedBranch ?>)</h1>
