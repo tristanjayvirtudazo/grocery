@@ -12,7 +12,7 @@ if (!$_GET['branch']) {
 }
 
 $errors = array();
-$branchID = $_GET['branch'];
+$branchID = trim($_GET['branch']);
 
 $branchQuery = "SELECT street FROM branch WHERE id = '$branchID' LIMIT 1";
 $branchResult = $connect->query($branchQuery);
@@ -37,10 +37,10 @@ if ($_POST) {
 			$password = md5($password);
 			$sql = "SELECT * FROM users WHERE  username = '$username' AND password = '$password' AND (branch_name = '$selectedBranch' OR role = 'admin')";
 			echo $sql;
-			$result = $connect->query($sql);
+			$result = mysqli_query($connect, $sql);
 
 			if ($result->num_rows == 1) {
-				$value = $result->fetch_assoc();
+				$value = mysqli_fetch_assoc($result);
 				$user_id = $value['user_id'];
 
 				// set session
