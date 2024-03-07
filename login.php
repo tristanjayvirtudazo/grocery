@@ -18,7 +18,7 @@ $branchQuery = "SELECT street FROM branch WHERE id = '$branchID' LIMIT 1";
 $branchResult = $connect->query($branchQuery);
 $branch = mysqli_fetch_assoc($branchResult);
 
-$selectedBranch = $branch['street'];
+$selectedBranch = trim($branch['street']);
 
 if ($_POST) {
 	if (isset($_POST['login'])) {
@@ -35,7 +35,7 @@ if ($_POST) {
 			}
 		} else {
 			$password = md5($password);
-			$sql = "SELECT * FROM users WHERE  username = '$username' AND password = '$password' AND (branch_name = '$selectedBranch' OR role = 'admin')";
+			$sql = "SELECT * FROM users WHERE  username = '$username' AND password = '$password' AND (TRIM(branch_name) = '$selectedBranch' OR role = 'admin')";
 			echo $sql;
 			$result = mysqli_query($connect, $sql);
 			mysqli_error($connect);
