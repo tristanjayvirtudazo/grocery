@@ -36,7 +36,6 @@ if ($_POST) {
 		} else {
 			$password = md5($password);
 			$sql = "SELECT * FROM users WHERE  username = '$username' AND password = '$password' AND (TRIM(branch_name) = '$selectedBranch' OR role = 'admin')";
-			echo $sql;
 			$result = mysqli_query($connect, $sql);
 			mysqli_error($connect);
 
