@@ -53,9 +53,10 @@ $result = $connect->query($fetchSql);
 <body>
   <br>
   <br><br>
-  <a href="./index.php">
-    < Back to Portal</a>
-      <div class="container">
+
+  <div class="container">
+    <a href="./index.php">
+      < Back to Portal</a>
         <div class="row" id="expiryTable">
           <div class="panel panel-default">
 
@@ -200,7 +201,7 @@ $result = $connect->query($fetchSql);
           <!-- /modal-dailog -->
         </div>
 
-      </div>
+  </div>
 </body>
 
 </html>
