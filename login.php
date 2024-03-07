@@ -104,7 +104,10 @@ if ($_POST) {
 <body>
 
 	<div class="container">
-		<img src="./assests/images/logo.png" alt="logo" width="100" style="text-align: center;">
+		<div style="width: 100%;">
+			<img src="./assests/images/logo.png" alt="logo" width="200" style="text-align: center;">
+		</div>
+
 		<div class="row vertical">
 			<div class="col-md-5 col-md-offset-4">
 				<div class="panel panel-info">
