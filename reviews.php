@@ -56,7 +56,7 @@ $result = $connect->query($fetchSql);
 
   <div class="container">
     <a href="./index.php">
-      < Back to Portal</a>
+      < Back to Portal</a><br>
         <div class="row" id="expiryTable">
           <div class="panel panel-default">
 
