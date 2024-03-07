@@ -50,7 +50,7 @@ if ($_POST) {
 				$_SESSION['full_name'] = $value['full_name'];
 				$_SESSION['role_type'] = $value['role'];
 
-				// header('location: https://nerissas-grocery.store/dashboard.php?branch=' . $value['branch_name']);
+				header('location: https://nerissas-grocery.store/dashboard.php?branch=' . $value['branch_name']);
 			} else {
 
 				$errors[] = "Incorrect username/password combination. Please try again.";
