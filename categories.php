@@ -46,14 +46,14 @@
 			<form class="form-horizontal" id="submitCategoriesForm" action="php_action/createCategories.php" method="POST">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title"><i class="fa fa-plus"></i> Add Categories</h4>
+					<h4 class="modal-title"><i class="fa fa-plus"></i> Add Category</h4>
 				</div>
 				<div class="modal-body">
 
 					<div id="add-categories-messages"></div>
 
 					<div class="form-group">
-						<label for="categoriesName" class="col-sm-4 control-label">Categories Name: </label>
+						<label for="categoriesName" class="col-sm-4 control-label">Category Name: </label>
 						<label class="col-sm-1 control-label">: </label>
 						<div class="col-sm-7">
 							<input type="text" class="form-control" id="categoriesName" placeholder="Categories Name" name="categoriesName" autocomplete="off">
@@ -105,7 +105,7 @@
 
 					<div class="edit-categories-result">
 						<div class="form-group">
-							<label for="editCategoriesName" class="col-sm-4 control-label">Categories Name: </label>
+							<label for="editCategoriesName" class="col-sm-4 control-label">Category Name: </label>
 							<label class="col-sm-1 control-label">: </label>
 							<div class="col-sm-7">
 								<input type="text" class="form-control" id="editCategoriesName" placeholder="Categories Name" name="editCategoriesName" autocomplete="off">
