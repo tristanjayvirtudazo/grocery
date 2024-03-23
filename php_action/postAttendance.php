@@ -2,6 +2,9 @@
 
 require_once 'core.php';
 
+date_default_timezone_set("Asia/Bangkok");
+echo date_default_timezone_get();
+
 $data = $_POST['data'];
 $qrContent = $_POST['qrData'];
 $validator = md5($_POST['validator']);
