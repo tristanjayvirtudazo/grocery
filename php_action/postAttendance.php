@@ -12,6 +12,8 @@ $validator = md5($_POST['validator']);
 $employeeQuery = "SELECT * FROM users WHERE full_name = '$qrContent' LIMIT 1";
 $output = $connect->query($employeeQuery);
 
+$dateNow = date("Y-m-d H:i:s");
+
 if($output->num_rows > 0) {
     $value = $output->fetch_assoc();
     $user = $value['user_id'];
@@ -19,7 +21,7 @@ if($output->num_rows > 0) {
 
     if($value['password'] == $validator){
         if($data == 'Time-in'){
-            $sql = "INSERT INTO attendance (user_id, time_in, date) VALUES ('$user', NOW(), NOW())";
+            $sql = "INSERT INTO attendance (user_id, time_in, date) VALUES ('$user', '$dateNow', '$dateNow')";
             if($connect->query($sql) === TRUE) {
                 $valid['success'] = true;
                 $valid['messages'] = "Successfully Added";
@@ -30,7 +32,7 @@ if($output->num_rows > 0) {
                 $valid['messages'] = "Error while adding attendance";
             }
         }else{
-            $sql = "UPDATE attendance SET time_out = NOW() WHERE user_id = '$user' ORDER BY id DESC LIMIT 1";
+            $sql = "UPDATE attendance SET time_out = $dateNow WHERE user_id = '$user' ORDER BY id DESC LIMIT 1";
             if($connect->query($sql) === TRUE) {
                 $valid['success'] = true;
                 $valid['messages'] = "Successfully Added";
