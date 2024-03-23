@@ -4,7 +4,6 @@
 require_once 'php_action/extras.php';
 
 date_default_timezone_set("Asia/Manila");
-echo date_default_timezone_get();
 
 $branch = $_SESSION['branch'];
 $role = $_SESSION['role_type'];
