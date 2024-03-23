@@ -3,6 +3,9 @@
 <?php 
 require_once 'php_action/extras.php';
 
+date_default_timezone_set("Asia/Manila");
+
+
 $branch = $_SESSION['branch'];
 $role = $_SESSION['role_type'];
 
