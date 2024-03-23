@@ -2,8 +2,7 @@
 
 require_once 'core.php';
 
-date_default_timezone_set("Asia/Bangkok");
-echo date_default_timezone_get();
+date_default_timezone_set("Asia/Manila");
 
 $data = $_POST['data'];
 $qrContent = $_POST['qrData'];
