@@ -31,7 +31,7 @@ if($output->num_rows > 0) {
                 $valid['messages'] = "Error while adding attendance";
             }
         }else{
-            $sql = "UPDATE attendance SET time_out = $dateNow WHERE user_id = '$user' ORDER BY id DESC LIMIT 1";
+            $sql = "UPDATE attendance SET time_out = '$dateNow' WHERE user_id = '$user' ORDER BY id DESC LIMIT 1";
             if($connect->query($sql) === TRUE) {
                 $valid['success'] = true;
                 $valid['messages'] = "Successfully Added";
