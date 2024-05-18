@@ -111,7 +111,7 @@ if ($_POST) {
 		<div class="row vertical">
 			<div class="col-md-6 col-md-offset-3">
 				<div class="panel panel-info">
-					<div class="panel-heading">
+					<div class="panel-heading" style="background:#ed1c23; color: white;">
 						<h1 class="panel-title text-center">Welcome to Nerissa's Grocery Store Inventory System <br> (<?= $selectedBranch ?>)</h1>
 					</div>
 					<div class="panel-body">
@@ -142,7 +142,7 @@ if ($_POST) {
 								</div>
 								<div class="form-group">
 									<div class="col-sm-offset-2 col-sm-6">
-										<button type="submit" name="login" id="login" class="btn btn-default"> <i class="glyphicon glyphicon-log-in"></i> Login</button>
+										<button type="submit" name="login" id="login" class="btn btn-warning"> <i class="glyphicon glyphicon-log-in"></i> Login</button>
 									</div>
 									<!-- <div class="col-sm-3">
 										<a href="" data-toggle="modal" id="addProductModalBtn" class="btn btn-default btn-primary" data-target="#addProductModal">Sign-Up</a>

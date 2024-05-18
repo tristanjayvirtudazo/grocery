@@ -10,7 +10,7 @@
 		</ol>
 
 		<div class="panel panel-default">
-			<div class="panel-heading">
+			<div class="panel-heading" style="background:#ed1c23; color: white;">
 				<div class="page-heading"> <i class="glyphicon glyphicon-edit"></i> Manage Categories</div>
 			</div> <!-- /panel-heading -->
 			<div class="panel-body">
@@ -18,7 +18,7 @@
 				<div class="remove-messages"></div>
 
 				<div class="div-action pull pull-right" style="padding-bottom:20px;">
-					<button class="btn btn-default button1" data-toggle="modal" id="addCategoriesModalBtn" data-target="#addCategoriesModal"> <i class="glyphicon glyphicon-plus-sign"></i> Add Categories </button>
+					<button class="btn btn-warning button1" data-toggle="modal" id="addCategoriesModalBtn" data-target="#addCategoriesModal"> <i class="glyphicon glyphicon-plus-sign"></i> Add Categories </button>
 				</div> <!-- /div-action -->
 
 				<table class="table" id="manageCategoriesTable">

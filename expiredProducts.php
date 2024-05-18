@@ -1,6 +1,6 @@
 <?php require_once 'includes/header.php'; ?>
 
-<?php 
+<?php
 // require_once 'php_action/extras.php';
 
 // $branch = $_SESSION['branch'];
@@ -36,86 +36,86 @@
 ?>
 
 
-<div class="row" id="expiryTable"> 
+<div class="row" id="expiryTable">
 	<div class="panel panel-default">
-			<div class="panel-heading">
-				<div class="page-heading"> <i class="glyphicon glyphicon-edit"></i> Expired / Expiring Products</div>
-			</div> <!-- /panel-heading -->
-			<div class="panel-body">
+		<div class="panel-heading" style="background:#ed1c23; color: white;">
+			<div class="page-heading"> <i class="glyphicon glyphicon-edit"></i> Expired / Expiring Products</div>
+		</div> <!-- /panel-heading -->
+		<div class="panel-body">
 
-				<div class="remove-messages"></div>
-							
-				<table class="table" id="expiryProductTable">
-					<thead>
-						<tr>						
-							<th>Product Name</th>
-							<th>Price</th>							
-							<th>Quantity</th>
-							<th>Brand</th>
-							<th>Unit</th>
-							<th>Category</th>
-							<th>Expiry Date</th>
-							<th>Status</th>	
-                            <th>Action</th>	
-						</tr>
-					</thead>
-					<tbody id="expiryList">
-					</tbody>
-				</table>
-				<!-- /table -->
+			<div class="remove-messages"></div>
 
-			</div> <!-- /panel-body -->
-		</div> <!-- /panel -->	
+			<table class="table" id="expiryProductTable">
+				<thead>
+					<tr>
+						<th>Product Name</th>
+						<th>Price</th>
+						<th>Quantity</th>
+						<th>Brand</th>
+						<th>Unit</th>
+						<th>Category</th>
+						<th>Expiry Date</th>
+						<th>Status</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody id="expiryList">
+				</tbody>
+			</table>
+			<!-- /table -->
+
+		</div> <!-- /panel-body -->
+	</div> <!-- /panel -->
 </div>
 
 <!-- categories brand -->
 <div class="modal fade" tabindex="-1" role="dialog" id="removeProductModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title"><i class="glyphicon glyphicon-trash"></i> Remove Product</h4>
-      </div>
-      <div class="modal-body">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title"><i class="glyphicon glyphicon-trash"></i> Remove Product</h4>
+			</div>
+			<div class="modal-body">
 
-      	<div class="removeProductMessages"></div>
+				<div class="removeProductMessages"></div>
 
-        <p>Do you really want to remove?</p>
-      </div>
-      <div class="modal-footer removeProductFooter">
-        <button type="button" class="btn btn-default" data-dismiss="modal"> <i class="glyphicon glyphicon-remove-sign"></i> Close</button>
-        <button type="button" class="btn btn-primary" id="removeProductBtn" data-loading-text="Loading..."> <i class="glyphicon glyphicon-ok-sign"></i> Save changes</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
+				<p>Do you really want to remove?</p>
+			</div>
+			<div class="modal-footer removeProductFooter">
+				<button type="button" class="btn btn-default" data-dismiss="modal"> <i class="glyphicon glyphicon-remove-sign"></i> Close</button>
+				<button type="button" class="btn btn-primary" id="removeProductBtn" data-loading-text="Loading..."> <i class="glyphicon glyphicon-ok-sign"></i> Save changes</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 <!-- /categories brand -->
 
 <!-- Edit dialouge -->
-<div class="modal fade" id="editDialog" tabindex="-1" role="dialog" >
-  <div class="modal-dialog">
-    <div class="modal-content">
-    	    	
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title dynamic-title"><i class="fa fa-edit"></i></h4>
-	      </div>
+<div class="modal fade" id="editDialog" tabindex="-1" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
 
-	      <div class="modal-body" style="max-height:450px; overflow:auto;">
-	      	<div class="text-center">
-	      		<h5>Would you like to proceed?</h5>
-	      	</div>
-	      	
-	      </div> <!-- /modal-body -->
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title dynamic-title"><i class="fa fa-edit"></i></h4>
+			</div>
 
-		  <div class="modal-footer">
-		  	<button type="button" class="btn btn-default" data-dismiss="modal"> <i class="glyphicon glyphicon-remove-sign"></i> Close</button>					
-			<button type="button" class="btn btn-primary" id="dialogBtn" data-toggle="modal" data-dismiss="modal"> <i class="glyphicon glyphicon-ok-sign"></i> Proceed</button>
-		  </div>
-    </div>
-    <!-- /modal-content -->
-  </div>
-  <!-- /modal-dailog -->
+			<div class="modal-body" style="max-height:450px; overflow:auto;">
+				<div class="text-center">
+					<h5>Would you like to proceed?</h5>
+				</div>
+
+			</div> <!-- /modal-body -->
+
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal"> <i class="glyphicon glyphicon-remove-sign"></i> Close</button>
+				<button type="button" class="btn btn-primary" id="dialogBtn" data-toggle="modal" data-dismiss="modal"> <i class="glyphicon glyphicon-ok-sign"></i> Proceed</button>
+			</div>
+		</div>
+		<!-- /modal-content -->
+	</div>
+	<!-- /modal-dailog -->
 </div>
 
 

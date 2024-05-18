@@ -54,6 +54,7 @@ if ($result->num_rows > 0) {
 
 <!DOCTYPE html>
 <html>
+
 <head>
 	<!-- Tab Title -->
 	<title>Nerissa's Grocery Store's Inventory Management System</title>
@@ -90,21 +91,24 @@ if ($result->num_rows > 0) {
 
 </head>
 <!-- Whole Background Color -->
+
 <body style="background-color: #ffffff">
 
-	<!-- Header BG Color -->
-	<nav class="navbar navbar-static-top" style="background-color: #00cc44">
-		<div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <h4 class="navbar-brand" style="margin: 0;"><a  href="#" style="color: white;">Nerissa's Grocery Store (<?= $_SESSION['branch'] ?>)</a></h4>
-    </div>
+  <!-- Header BG Color -->
+  <nav class="navbar navbar-static-top" style="background-color: #eda034;">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div>
+          <img style="padding: 15px" src="./assests/images/banner.png" width="200" alt="banner">
+        </div>
+      </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">      

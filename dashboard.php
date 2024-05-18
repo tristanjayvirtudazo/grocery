@@ -51,7 +51,7 @@ $connect->close();
 <link rel="stylesheet" href="assests/plugins/fullcalendar/fullcalendar.min.css">
 <link rel="stylesheet" href="assests/plugins/fullcalendar/fullcalendar.print.css" media="print">
 
-<div class="row" style="margin-bottom: 30px;">
+<div class="row" style="margin-bottom: 30px; display:none;">
 	<div class="col-md-12">
 		<div class="card">
 			<div class="cardHeader">
@@ -85,7 +85,7 @@ $connect->close();
 
 	<div class="col-md-4">
 		<div class="card">
-			<div class="cardHeader" style="background-color:#245580;">
+			<div class="cardHeader" style="background-color:#ed1c23;">
 				<h1><?php echo $countProduct; ?></h1>
 			</div>
 
@@ -121,7 +121,7 @@ $connect->close();
 
 	<div class="col-md-4 align-self-center">
 		<div class="card">
-			<div class="cardHeader">
+			<div class="cardHeader" style="background-color: #eda034;">
 				<h1><?php echo date('d'); ?></h1>
 			</div>
 
@@ -133,7 +133,7 @@ $connect->close();
 
 	<div class="col-md-4">
 		<div class="card">
-			<div class="cardHeader" style="background-color:#245580;">
+			<div class="cardHeader" style="background-color:#ed1c23;">
 				<h1>&#8369; <?= revenueCount($second_query) ?></h1>
 			</div>
 

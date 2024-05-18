@@ -30,7 +30,7 @@ if (isset($_POST['createUser'])) {
 		</ol>
 
 		<div class="panel panel-default">
-			<div class="panel-heading">
+			<div class="panel-heading" style="background:#ed1c23; color: white;">
 				<div class="page-heading"> <i class="glyphicon glyphicon-edit"></i> Manage Users</div>
 			</div> <!-- /panel-heading -->
 			<div class="panel-body">
@@ -38,7 +38,7 @@ if (isset($_POST['createUser'])) {
 				<div class="remove-messages"></div>
 
 				<div class="div-action pull pull-right" style="padding-bottom:20px;">
-					<button class="btn btn-default button1" data-toggle="modal" id="addCategoriesModalBtn" data-target="#addProductModal"> <i class="glyphicon glyphicon-plus-sign"></i> Add User </button>
+					<button class="btn btn-warning button1" data-toggle="modal" id="addCategoriesModalBtn" data-target="#addProductModal"> <i class="glyphicon glyphicon-plus-sign"></i> Add User </button>
 				</div> <!-- /div-action -->
 
 				<table class="table" id="manageCategoriesTable">

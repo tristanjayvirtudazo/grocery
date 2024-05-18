@@ -10,7 +10,6 @@ if (isset($_SESSION['userId'])) {
 $sql = "SELECT * FROM branch";
 $result = $connect->query($sql);
 
-
 ?>
 
 <!DOCTYPE html>
@@ -39,34 +38,21 @@ $result = $connect->query($sql);
 	<script src="assests/bootstrap/js/bootstrap.min.js"></script>
 </head>
 
-<body>
+<body style="box-sizing: border-box;">
 	<div class="container">
 		<br><br><br><br>
-		<h1 class="text-center">Nerissa's Grocery Store Branches</h1>
+		<div style="width: 100%;display: flex; justify-content: center;">
+			<img style="text-align:center;" src="./assests/images//banner.png" width="400" alt="banner">
+		</div>
 		<br>
 		<div class="row text-center">
-			<?php
-			if ($result->num_rows > 0) {
-				while ($row = mysqli_fetch_assoc($result)) {
-			?>
-					<div class="col-md-4">
-						<h3><?php echo $row["street"] ?></h3>
-						<h5><?php echo $row['city'] ?></h5>
-						<h1><a href="./login.php?branch=<?php echo $row['id'] ?>" class="btn btn-default btn-lg btn-success">Branch <?php echo $row['id'] ?></a></h1>
-					</div>
-			<?php
-				}
-			}
-			mysqli_close($connect);
-			?>
-
-			<!-- <div class="col-md-4">
-				<h3>141 Balatan st.</h3>
-				<h5>Western Bicutan Taguig City</h5>
-				<h1><a href="./login.php?branch=b2" class="btn btn-default btn-lg btn-warning">Branch 2</a></h1>
+			<div>
+				<h3>SSB Brigade Branch</h3>
+				<h5>Block 7, Lot 7, SSB Brigade, Western Bicutan Taguig City</h5>
+				<h1><a href="./login.php?branch=1" class="btn btn-default btn-lg btn-warning">Branch 1</a></h1>
 			</div>
 
-			<div class="col-md-4">
+			<!-- <div class="col-md-4">
 				<h3>16 Dalandan st.</h3>
 				<h5>Western Bicutan Taguig City</h5>
 				<h1><a href="./login.php?branch=b3" class="btn btn-default btn-lg btn-primary">Branch 3</a></h1>
