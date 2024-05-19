@@ -130,8 +130,8 @@ if (isset($_POST['createUser'])) {
 						<div class="form-group">
 							<label for="branch_name" class="col-sm-3 control-label">Branch Name:</label>
 							<div class="col-sm-9">
-								<select class="form-control" name="branch_name" id="branch_name" readonly>
-									<option value="SSB Brigade Branch">SSB Brigade Branch</option>
+								<select class="form-control" name="branch_name" id="branch_name" disabled>
+									<option value="SSB Brigade Branch" selected>SSB Brigade Branch</option>
 									<option value="Balatan Branch">Balatan Branch</option>
 									<option value="Dalandan Branch">Dalandan Branch</option>
 								</select>
