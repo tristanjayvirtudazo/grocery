@@ -151,7 +151,7 @@ if (isset($_POST['createUser'])) {
 
 					</fieldset>
 
-					<div class="qr_section">
+					<div class="qr_section hidden">
 						<div class="row">
 							<div class="col-sm-3">
 								<button disabled id="qrBTN" type="button" class="btn btn-default" onclick="revealQR()">Generate QR Code</button>

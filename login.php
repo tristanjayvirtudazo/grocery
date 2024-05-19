@@ -154,7 +154,7 @@ if ($_POST) {
 						<div>
 							<a href="./index.php">
 								< Back to Portal</a>
-									<a class="pull-right" href="./reviews.php?branchId=<?php echo $branchID; ?>">Post Reviews ></a>
+									<a class="pull-right hidden" href="./reviews.php?branchId=<?php echo $branchID; ?>">Post Reviews ></a>
 						</div>
 					</div>
 					<!-- panel-body -->
